@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            transition: all ease-in-out 1s;
+        }
+        div#area{
+            font: normal 20pt arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 1s;
+        }
+        div#alanis{
+            font: bolder 40pt arial;
+            text-align: center;
+            position: relative;
+            top: 200px;
+            display: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+    <div id="alanis">
+        amo a alanis
+    </div>
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText='Clicou'
+            a.style.background='white'
+            a.style.color='black'
+            document.body.style.background='black'
+            document.getElementById('alanis').style.display='block'
+        }
+        function entrar(){
+            a.innerText='Entrou'
+        }
+        function sair(){
+            a.innerText='Saiu'
+            a.style.background='green'
+            a.style.color='white'
+            document.body.style.background='white'
+        }
+    </script>
+</body>
+</html>

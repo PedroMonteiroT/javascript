@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de nacionalidade</title>
+</head>
+<body>
+    <h1>Digite o país em que você nasceu</h1>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Enviar" onclick="nac()">
+    <div id="res"></div>
+    <script>
+        function nac(){
+            var res = document.getElementById('res')
+            var nac = document.getElementById('nac')
+            nac = nac.value
+            if (nac=="Brasil"){
+                res.innerHTML = 'Você é brasileiro meu chapa'
+                document.body.style.backgroundColor='black'
+                document.body.style.color='white'
+            }else{
+                res.innerHTML = 'O que passa cabron'
+            }
+
+        }
+
+    </script>
+</body>
+</html>
